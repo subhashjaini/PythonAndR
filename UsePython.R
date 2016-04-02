@@ -1,6 +1,2 @@
-AA = pd.DataFrame(d)
-ColumnNames = list(AA.columns)
-print(ColumnNames)
-for Column in range(0,len(ColumnNames)):
-for ValueInColumn in AA.ix[:,Column].values:
-print(ValueInColumn)
+DF = shell('python C:/Stuff/Experiment.py',intern=TRUE)
+ColumnNames = unlist(strsplit(gsub("\\[|\\]|'| ","",DF[1]),","))
